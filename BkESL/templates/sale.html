@@ -1,0 +1,67 @@
+{% load static%}
+<img src="{% static 'loss/RPSG-LOGO-1.png'%}" width="150">
+<table align="center">
+    <h2 align="center">BkESL HT & LT SALE</h2>
+
+
+    <style>
+
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+
+
+    <td>
+      <table>
+        <tr><th>SDO</th></tr>
+        <tr><td>{%for sdo in sdo%}</td></tr>
+          <td align="center">{{sdo}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>HT SALE</th></tr>
+        <tr><td>{%for ht in ht%}</td></tr>
+          <td align="center">{{ht}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>LT SALE</th></tr>
+        <tr><td>{%for lt in lt%}</td></tr>
+          <td align="center">{{lt}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+     <td>
+      <table>
+        <tr><th>TOTAL SALE</th></tr>
+        <tr><td>{%for total in total%}</td></tr>
+          <td align="center">{{total}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+</form>

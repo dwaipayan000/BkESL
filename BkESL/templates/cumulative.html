@@ -1,0 +1,98 @@
+{% load static%}
+<img src="{% static 'loss/RPSG-LOGO-1.png'%}" width="150">
+<table align="center">
+    <h2 align="center">BkESL CUMULATIVE T & D LOSS</h2>
+
+
+    <style>
+
+  table {
+  border-collapse: collapse;
+  width: 120%;
+}
+
+th, td {
+  text-align: center;
+  padding: 1px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+    <td>
+      <table>
+        <tr><th>MONTH</th></tr>
+        <tr><td>{%for month in month%}</td></tr>
+          <td align="center">{{month}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>SDO</th></tr>
+        <tr><td>{%for sdo in sdo%}</td></tr>
+          <td align="center">{{sdo}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>OVER ALL CONSUMPTION (MU)</th></tr>
+        <tr><td>{%for consumption in consumption%}</td></tr>
+          <td align="center">{{consumption}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>OVER ALL SALE (MU)</th></tr>
+        <tr><td>{%for sale in sale%}</td></tr>
+          <td align="center">{{sale}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+     <td>
+      <table>
+        <tr><th>OVER ALL LOSS (%)</th></tr>
+        <tr><td>{%for loss in loss%}</td></tr>
+          <td align="center">{{loss}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr><th>ONLY LT CONSUMPTION (MU)</th></tr>
+        <tr><td>{%for consumption1 in consumption1%}</td></tr>
+          <td align="center">{{consumption1}}</td>
+          {%endfor%}
+
+      </table>
+     <td>
+      <table>
+        <tr><th>ONLY LT SALE (MU)</th></tr>
+        <tr><td>{%for sale1 in sale1%}</td></tr>
+          <td align="center">{{sale1}}</td>
+          {%endfor%}
+
+      </table>
+      <td>
+      <table>
+        <tr><th>ONLY LT LOSS (%)</th></tr>
+        <tr><td>{%for loss1 in loss1%}</td></tr>
+          <td align="center">{{loss1}}</td>
+          {%endfor%}
+
+      </table>
+    </td>

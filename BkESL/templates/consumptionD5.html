@@ -1,0 +1,77 @@
+{% load static%}
+<img src="{% static 'loss/RPSG-LOGO-1.png'%}" width="150">
+<!DOCTYPE html>
+<html lang="en">
+<table align="center">
+    <h2 align="center">CONSUMPTION SDO-5</h2>
+
+
+    <style>
+
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  paddingc: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+
+
+    <td>
+      <table>
+        <tr><th>SDO</th></tr>
+        <tr><td>{%for sdo in sdo%}</td></tr>
+          <td align="center">{{sdo}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>SHARING</th></tr>
+        <tr><td>{%for sharing in sharing%}</td></tr>
+          <td align="center">{{sharing}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>GSS</th></tr>
+        <tr><td>{%for gss in gss%}</td></tr>
+          <td align="center">{{gss}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+     <td>
+      <table>
+        <tr><th>FEEDER</th></tr>
+        <tr><td>{%for feeder in feeder%}</td></tr>
+          <td align="center">{{feeder}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr><th>KWH</th></tr>
+        <tr><td>{%for kwh in kwh%}</td></tr>
+          <td align="center">{{kwh}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+</form>

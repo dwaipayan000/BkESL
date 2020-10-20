@@ -1,0 +1,91 @@
+{% load static%}
+<img src="{% static 'loss/RPSG-LOGO-1.png'%}" width="150">
+
+<table align="center">
+    <h2 align="center">% CHANGE W.R.T LAST MONTH</h2>
+
+
+    <style>
+
+  table {
+  border-collapse: collapse;
+  width: 120%;
+}
+
+th, td {
+  text-align: center;
+  padding: 1px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: black;
+}
+  </style>
+
+
+    <td>
+      <table>
+        <tr><th>SDO</th></tr>
+        <tr><td>{%for sdo in sdo%}</td></tr>
+          <td align="center">{{sdo}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>% CHANGE IN HT+LT CONSUMPTION</th></tr>
+        <tr><td>{%for consumption in consumption%}</td></tr>
+          <td align="center">{{consumption}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>% CHANGE IN HT+LT SALE</th></tr>
+        <tr><td>{%for sale in sale%}</td></tr>
+          <td align="center">{{sale}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+     <td>
+      <table>
+        <tr><th>% CHANGE IN HT+LT LOSS</th></tr>
+        <tr><td>{%for loss in loss%}</td></tr>
+          <td align="center">{{loss}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr><th>% CHANGE IN LT CONSUMPTION</th></tr>
+        <tr><td>{%for consumption1 in consumption1%}</td></tr>
+          <td align="center">{{consumption1}}</td>
+          {%endfor%}
+
+      </table>
+     <td>
+      <table>
+        <tr><th>% CHANGE IN LT SALE</th></tr>
+        <tr><td>{%for sale1 in sale1%}</td></tr>
+          <td align="center">{{sale1}}</td>
+          {%endfor%}
+
+      </table>
+      <td>
+      <table>
+        <tr><th>% CHANGE IN LT LOSS</th></tr>
+        <tr><td>{%for loss1 in loss1%}</td></tr>
+          <td align="center">{{loss1}}</td>
+          {%endfor%}
+
+      </table>
+    </td>

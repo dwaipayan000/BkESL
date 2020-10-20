@@ -1,0 +1,107 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body style="background-image: url({% static 'loss/chess.jpg' %});background-repeat:no-repeat;
+background-size:100%;">
+
+<div class="navbar">
+  <a href="{%url 'sale' %}">SALE</a>
+  <a href="{%url 'EHT' %}">33 KV SALE</a>
+  <a href="{%url 'vigilance' %}">VIGILANCE UNIT</a>
+  <a href="{%url 'loss' %}">LOSS</a>
+  <a href="{%url 'cumulative' %}">CUMULATIVE</a>
+  <a href="{% url 'comparison' %}">COMPARISON</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">CONSUMPTION
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{%url 'consumption' %}">ALL CONSUMPTION</a>
+  <a href="{%url 'consumptionD1' %}">SDO1</a>
+  <a href="{%url 'consumptionD2' %}">SDO2</a>
+  <a href="{%url 'consumptionD3' %}">SDO3</a>
+  <a href="{%url 'consumptionD4' %}">SDO4</a>
+  <a href="{%url 'consumptionD5' %}">SDO5</a>
+  <a href="{%url 'consumptionD6' %}">SDO6 & 9</a>
+  <a href="{%url 'consumptionD7' %}">SDO7</a>
+  <a href="{%url 'consumptionD8' %}">SDO8</a>
+    </div>
+  </div>
+</div>
+
+
+<img src=>
+</body>
+</html>

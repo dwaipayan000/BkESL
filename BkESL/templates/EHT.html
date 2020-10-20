@@ -1,0 +1,58 @@
+{% load static%}
+<img src="{% static 'loss/RPSG-LOGO-1.png'%}" width="150">
+<table align="center">
+    <h2 align="center">BkESL 33 KV CONSUMER BILLED UNIT</h2>
+
+
+    <style>
+
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+
+
+    <td>
+      <table>
+        <tr><th>SDO</th></tr>
+        <tr><td>{%for sdo in sdo%}</td></tr>
+          <td align="center">{{sdo}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>CONSUMER NAME</th></tr>
+        <tr><td>{%for consumer_name in consumer_name%}</td></tr>
+          <td align="center">{{consumer_name}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>BILLED UNIT</th></tr>
+        <tr><td>{%for billed_unit in billed_unit%}</td></tr>
+          <td align="center">{{billed_unit}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+</form>

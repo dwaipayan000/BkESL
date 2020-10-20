@@ -1,0 +1,46 @@
+{% load static%}
+<img src="{% static 'loss/RPSG-LOGO-1.png'%}" width="150">
+<table align="center">
+    <h2 align="center">VIGILANCE SALE DATA</h2>
+
+
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+
+
+    <td>
+      <table>
+        <tr><th>SDO</th></tr>
+        <tr><td>{%for sdo in sdo%}</td></tr>
+          <td align="center">{{sdo}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
+    <td>
+      <table>
+        <tr><th>UNIT</th></tr>
+        <tr><td>{%for unit in unit%}</td></tr>
+          <td align="center">{{unit}}</td>
+          {%endfor%}
+
+      </table>
+    </td>
+
